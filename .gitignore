@@ -5,3 +5,5 @@ data/
 *.csv
 .fake
 .ionide
+.ipynb_checkpoints
+.pyc
