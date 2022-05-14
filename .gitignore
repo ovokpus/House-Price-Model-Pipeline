@@ -1,7 +1,8 @@
 data/
-~/.ipynb_checkpoints/
 ~/datasets/
-~/__pycache__/
 *.csv
 .fake
 .ionide
+.ipynb_checkpoints
+.pyc
+__pycache__
