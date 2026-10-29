@@ -1,0 +1,58 @@
+# `docker compose up` builds both images, trains on first start, and serves:
+#   http://127.0.0.1:8501  the district form
+#   http://127.0.0.1:8000  the prediction API
+# The named volume keeps the versioned artifact so the next start only loads it.
+# Set FORCE_RETRAIN=1 to fit a new version anyway.
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      ARTIFACT_DIR: /app/artifacts
+      FORCE_RETRAIN: ${FORCE_RETRAIN:-0}
+      PORT: "8000"
+    volumes:
+      - house-price-artifacts:/app/artifacts
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')",
+        ]
+      interval: 15s
+      timeout: 5s
+      retries: 20
+      start_period: 180s
+
+  web:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8501:8501"
+    environment:
+      API_URL: http://api:8000
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8501/_stcore/health')",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
+
+volumes:
+  house-price-artifacts:
