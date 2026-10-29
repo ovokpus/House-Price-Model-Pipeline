@@ -1,0 +1,14 @@
+.git
+.venv
+venv
+artifacts
+**/__pycache__
+**/*.pyc
+**/.ipynb_checkpoints
+**/.pytest_cache
+**/*.egg-info
+01_research-and-development/*.ipynb
+01_research-and-development/*.joblib
+img
+tests
+examples
