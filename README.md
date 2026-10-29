@@ -21,6 +21,10 @@ The data is the 1990 California census districts (the StatLib housing set shippe
 | Commands | `Makefile` |
 | What to build next | [PRODUCTIONIZING.md](PRODUCTIONIZING.md) |
 
+## Demo
+
+[assets/house-price-demo.mp4](assets/house-price-demo.mp4) is a one-minute recording of this stack on a local machine. The form opens on a Near Bay district. Ocean proximity is switched to inland and median income to 2.5. **Predict median value** returns **$166,156**. The browser then opens `GET /health` (`status: ok`, model `v20261029T174453Z`) and the `/predict` schema in the API docs.
+
 ## Architecture
 
 The browser never loads the model. Streamlit collects the nine fields and calls FastAPI. FastAPI owns the artifact volume. On a brand-new volume the API trains before it listens; after that it only loads `latest.json`.
