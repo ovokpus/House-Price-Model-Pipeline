@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/banner.jpg" alt="Brass balance scale weighing a small model house beside a wrapped box" width="100%"></p>
+
 # House Price Prediction Model
 
 ## End-to-End Machine Learning project from research to deployment and CI/CD
