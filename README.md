@@ -1,6 +1,6 @@
-<p align="center"><img src="assets/banner.jpg" alt="Brass balance scale weighing a small model house beside a wrapped box" width="100%"></p>
-
 # House Price Prediction
+
+<p align="center"><img src="assets/banner.jpg" alt="Brass balance scale weighing a small model house beside a wrapped box" width="100%"></p>
 
 A district-level model for California median house values, taken out of the research notebooks and put in two containers you can actually run: one scores districts, the other is a form that asks it to.
 
