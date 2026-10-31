@@ -38,7 +38,7 @@ These figures are **illustrative assumptions**.
 |---|---|---|
 | Analyst hours a month spent re-running notebooks and copying values into other systems | 20 | Assumption |
 | Share removed by an API and scheduled scoring | 75% | Assumption |
-| Analyst hourly cost | US$70 | BLS May 2024 median for data scientists (about $54 an hour, [BLS](https://www.bls.gov/ooh/math/data-scientists.htm)), multiplied by an assumed 1.3 |
+| Analyst hourly cost | US$70 | BLS May 2024 median for data scientists (about $54 an hour, [BLS](https://www.bls.gov/news.release/archives/ocwage_04022025.pdf)), multiplied by an assumed 1.3 |
 
 Saving: 20 × 12 × 75% = **180 hours, about US$12,600 a year** for one model. The more important benefit is auditability: which model version produced which value.
 
@@ -58,4 +58,4 @@ Saving: 20 × 12 × 75% = **180 hours, about US$12,600 a year** for one model. T
 ## Sources
 
 - scikit-learn, California Housing dataset (Pace and Barry, 1997): https://scikit-learn.org/stable/datasets/real_world.html#california-housing-dataset
-- U.S. Bureau of Labor Statistics, Data Scientists: https://www.bls.gov/ooh/math/data-scientists.htm
+- U.S. Bureau of Labor Statistics, OEWS May 2024 (Data Scientists): https://www.bls.gov/news.release/archives/ocwage_04022025.pdf
