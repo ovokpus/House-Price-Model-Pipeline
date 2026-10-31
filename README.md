@@ -8,6 +8,10 @@ The notebooks under `01_research-and-development/` are still the lab notes. They
 
 The data is the 1990 California census districts (the StatLib housing set shipped with Aurélien Géron's *Hands-On Machine Learning* examples). One row is a district, not a single house. The target is that district's median house value.
 
+## Business case
+
+Lenders, property platforms and appraisal teams want quick, consistent price estimates, and a model is only useful once it is packaged, tested and served. This repo takes a regression model from notebook to a versioned package, an API and automated deployment. It uses a public benchmark dataset, so it demonstrates the delivery pattern rather than a market-ready valuation model. [docs/BUSINESS_CASE.md](docs/BUSINESS_CASE.md) covers the use cases, an illustrative ROI model and the limits.
+
 ## What you get
 
 | Piece | Where it lives |
